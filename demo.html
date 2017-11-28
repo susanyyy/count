@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+	   //检测字符串中出现次数最多的字符串
+		var str = 'abcfaaaaaaaaf', //定义字符串
+		    obj = {}; //定义对象
+		//把字符串添加到对象中
+        for (var i =0; i<str.length; i++) { //循环字符串
+        	if(!obj[str.charAt(i)]) {
+        		obj[str.charAt(i)] = 1; 
+        	} else {
+        		obj[str.charAt(i)]++;
+        	}
+        }
+        // console.log(obj)
+        var min = 0;
+        var index = '';
+        for (var i in obj) {
+        	if (obj[i] > min) {
+        		min = obj[i];
+        		index = i;
+        	}
+         }
+         console.log(min, index)
+	</script>
+</body>
+</html>
